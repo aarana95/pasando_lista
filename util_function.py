@@ -68,9 +68,9 @@ def crear_nombres(sheet_instance, original_names, next_row, num_alumnos):
 
 def create_type_alumno(presencial):
 
-    alumno_casa = {"values": [{"userEnteredValue": {"boolValue": False}}, {"userEnteredValue": {
+    alumno_clase = {"values": [{"userEnteredValue": {"boolValue": False}}, {"userEnteredValue": {
                         "boolValue": True}}, {"userEnteredValue": {"boolValue": False}}]}
-    alumno_clase = {"values": [{"userEnteredValue": {"boolValue": True}}, {"userEnteredValue": {
+    alumno_casa = {"values": [{"userEnteredValue": {"boolValue": True}}, {"userEnteredValue": {
                         "boolValue": False}}, {"userEnteredValue": {"boolValue": False}}]}
     alumno_falta = {"values": [{"userEnteredValue": {"boolValue": False}}, {"userEnteredValue": {
                         "boolValue": False}}, {"userEnteredValue": {"boolValue": True}}]}
@@ -87,7 +87,7 @@ def create_requests(sheetId, next_row, num_alumnos, type_alumno):
         {
             "repeatCell": {
                 "cell": {"dataValidation": {"condition": {"type": "BOOLEAN"}}},
-                "range": {"sheetId": sheetId, "startRowIndex": next_row, "endRowIndex": (next_row + num_alumnos + 1),
+                "range": {"sheetId": sheetId, "startRowIndex": next_row, "endRowIndex": (next_row + num_alumnos),
                           "startColumnIndex": 2, "endColumnIndex": 5},
                 "fields": "dataValidation"
             }
@@ -129,7 +129,7 @@ def check_new_day(sheet_instance, original_names):
 def send_mail(mail_text, send_to):
 
     mail_gmail = 'arana.ieszizur@gmail.com'
-    pass_gmail = 'tu_contraseña'
+    pass_gmail = ''
 
     # Enviamos un mail con los eventos disponibles
     smtp_server = "smtp.gmail.com"

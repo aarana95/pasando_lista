@@ -111,13 +111,13 @@ def check_new_day(sheet_instance, original_names):
     names = sheet_instance.range(original_names)
     petardeo = False
 
-    if len(names) != 18:
+    if len(names) != 13:
         petardeo = True
 
-    if names[3].value != 'Aberto Lara':
+    if names[2].value != 'Aberto Lara':
         petardeo = True
 
-    if names[14].value != 'Javier Aparicio':
+    if names[10].value != 'Javier Aparicio':
         petardeo = True
 
     if petardeo:
@@ -129,7 +129,7 @@ def check_new_day(sheet_instance, original_names):
 def send_mail(mail_text, send_to):
 
     mail_gmail = 'arana.ieszizur@gmail.com'
-    pass_gmail = ''
+    pass_gmail = 'Teclado34'
 
     # Enviamos un mail con los eventos disponibles
     smtp_server = "smtp.gmail.com"

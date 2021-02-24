@@ -129,7 +129,7 @@ def check_new_day(sheet_instance, original_names):
 def send_mail(mail_text, send_to):
 
     mail_gmail = 'arana.ieszizur@gmail.com'
-    pass_gmail = 'Teclado34'
+    pass_gmail = ''
 
     # Enviamos un mail con los eventos disponibles
     smtp_server = "smtp.gmail.com"
